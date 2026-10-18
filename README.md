@@ -1,4 +1,3 @@
-
 # 📲 ScanSend — QR File Sharing
 A simple and user-friendly web application for sharing files using **QR codes and shareable links**. ScanSend aims to make file sharing convenient with a clean interface, user authentication, and upload progress tracking.
 
@@ -79,7 +78,7 @@ npm start
 Visit:
 
 ```text
-https://scansend.onrender.com
+http://localhost:3000
 ```
 
 Make sure the port matches the configuration in your server.
