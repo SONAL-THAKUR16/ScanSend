@@ -79,7 +79,7 @@ npm start
 Visit:
 
 ```text
-http://localhost:3000
+https://scansend.onrender.com
 ```
 
 Make sure the port matches the configuration in your server.
@@ -93,7 +93,7 @@ Make sure the port matches the configuration in your server.
 6. Open the link to access the shared file.
 
 ## 🌐 Live Demo
-**Live Website:** Add your deployed Render URL here.
+**Live Website:** https://scansend.onrender.com
 
 ## 🔒 Security & Privacy
 - Never commit passwords, API keys, or `.env` files to GitHub.
