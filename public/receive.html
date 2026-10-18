@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Receive file - QR File Share</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/">▦ QR <span>File Share</span></a>
+  <a href="/" class="outline">← Home</a>
+</header>
+
+<main class="container receivePage">
+  <section class="card">
+    <p class="eyebrow">FILE RECEIVED</p>
+    <div class="uploadIcon">↓</div>
+    <h1>Your file is ready</h1>
+    <p class="muted">Check the details before downloading.</p>
+
+    <div id="fileDetails" class="fileDetails">
+      Loading file details…
+    </div>
+
+    <a id="downloadBtn" class="primary full disabled" href="#">
+      Download file ↓
+    </a>
+
+    <p id="error" class="message"></p>
+    <p class="muted tiny">Only download files from people you trust.</p>
+  </section>
+</main>
+
+<script src="/receive.js"></script>
+</body>
+</html>

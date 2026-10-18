@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QR File Share</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/">▦ QR <span>File Share</span></a>
+  <button id="themeBtn" class="outline">☀️ Light mode</button>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <p class="eyebrow">OFFLINE-FRIENDLY FILE SHARING</p>
+    <h1>Files move.<br><span>Privacy stays.</span></h1>
+    <p>Share photos and documents between devices using a QR code.</p>
+  </section>
+
+  <section id="auth" class="card auth">
+    <h2 id="authTitle">Welcome back</h2>
+    <p id="authDesc" class="muted">Log in to continue.</p>
+
+    <div class="tabs">
+      <button id="loginTab" class="active">Login</button>
+      <button id="signupTab">Sign up</button>
+    </div>
+
+    <form id="authForm">
+      <div id="nameBox" class="hidden">
+        <label for="name">Full name</label>
+        <input id="name" placeholder="Your name">
+      </div>
+
+      <label for="email">Email address</label>
+      <input id="email" type="email" required
+             autocomplete="email" placeholder="you@example.com">
+
+      <label for="password">Password</label>
+      <input id="password" type="password" required minlength="6"
+             autocomplete="current-password" placeholder="At least 6 characters">
+
+      <button class="primary full" id="authSubmit">Login</button>
+      <p id="authMessage" class="message"></p>
+    </form>
+
+    <p class="muted tiny">
+      Demo account system. Do not use a real or reused password.
+    </p>
+  </section>
+
+  <section id="dashboard" class="hidden">
+    <div class="card welcome">
+      <div>
+        <p class="eyebrow">YOUR WORKSPACE</p>
+        <h2>QR File Share</h2>
+        <p id="welcomeText" class="muted"></p>
+      </div>
+      <button id="logout" class="outline">Log out</button>
+    </div>
+
+    <section class="card">
+      <div class="tabs">
+        <button id="sendTab" class="active">↗ Send</button>
+        <button id="receiveTab">▦ Receive</button>
+      </div>
+
+      <div id="sendView">
+        <h2>Send a file</h2>
+        <p class="muted">Select a file and upload it to create a QR code.</p>
+
+        <label class="dropzone" for="fileInput">
+          <span class="uploadIcon">↑</span>
+          <strong>Choose a file</strong>
+          <span class="muted">Photos, PDFs, documents · Up to 500 MB</span>
+          <input id="fileInput" type="file">
+        </label>
+
+        <p id="fileName" class="muted"></p>
+
+        <button id="uploadBtn" class="primary full">
+          Upload and create QR →
+        </button>
+
+        <div id="progressWrap" class="hidden">
+          <div class="progressInfo">
+            <span id="progressText">Uploading…</span>
+            <span id="progressPct">0%</span>
+          </div>
+          <div class="progress">
+            <div id="progressBar"></div>
+          </div>
+        </div>
+
+        <div id="sendResult" class="result hidden">
+          <h3>✓ Your file is ready</h3>
+          <p class="muted">Scan this QR code with the receiving phone.</p>
+          <div id="qr" class="qr"></div>
+          <div class="shareLink">
+            <span id="shareUrl"></span>
+            <button id="copyLink" class="outline">Copy link</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="receiveView" class="hidden">
+        <h2>Receive a file</h2>
+        <p class="muted">Scan the sender's QR code with your phone camera, or paste the share link.</p>
+
+        <label for="receiveLink">Share link</label>
+        <input id="receiveLink" placeholder="Paste the complete share URL">
+
+        <button id="openLinkBtn" class="primary full">
+          Open share link →
+        </button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="sectionHeading">
+        <div>
+          <h2>Recent files</h2>
+          <p class="muted">Files currently on this server.</p>
+        </div>
+        <button id="refreshFiles" class="outline">Refresh</button>
+      </div>
+      <div id="fileList"><p class="muted">Loading files…</p></div>
+    </section>
+  </section>
+
+  <footer>QR File Share · Local network transfer</footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
